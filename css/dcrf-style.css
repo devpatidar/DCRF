@@ -1,0 +1,34 @@
+/* DCRF Custom Styles */
+
+/*progress_steps ul*/
+.dcrf .progress_steps ul {margin:0;overflow: hidden;text-align: center;counter-reset: step;}
+.dcrf .progress_steps ul li {list-style-type: none;color: #A0A6AD;text-transform: uppercase;font-size: 10px;width: 16.1%;float: left;position: relative;letter-spacing: 1px;font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;border: 1px solid #ccc;border-bottom: none;margin-bottom: 0px; }
+.dcrf .progress_steps ul li:before {content: counter(step);counter-increment: step;width: 20px;line-height: 20px;display: block;font-size: 10px;color: #333;background: #E9EFF7;border-radius: 6px;margin: 0 auto 8px auto;margin-top: 6px;}
+/*progress_steps ul connectors*/
+.dcrf .progress_steps ul li:after {content: '';width: 100%;height: 2px;background: #E9EFF7;position: absolute;left: -50%;top: 9px;z-index: -1; /*put it behind the numbers*/}
+.dcrf .progress_steps ul li:first-child:after {/*connector not needed before the first step*/content: none; }
+/*marking active/completed progress_steps green*/
+/*The number of the step and the connector before it = green*/
+.dcrf .progress_steps ul li.active:before,  .progress_steps ul li.active:after{background: #0af;color: #fff;margin-top: 10px;}
+
+.no-js .dcrf.dcrf_adregform_container fieldset button, .no-js .dcrf_adregform_container h2, .dcrf_adregform_container.edit-form fieldset button, .dcrf_adregform_container.edit-form h2 {display: none !important;}
+.no-js .dcrf.dcrf_adregform_container fieldset, .dcrf_adregform_container.edit-form fieldset {display: block !important;}
+.no-js .dcrf.dcrf_adregform_container [type="submit"], .no-js .dcrf_adregform_container [type="reset"], .dcrf_adregform_container.edit-form [type="submit"], .dcrf_adregform_container.edit-form [type="reset"] {display: inline-block !important;}
+.no-js .dcrf.dcrf_adregform_container .progress_steps, .dcrf_adregform_container.edit-form .progress_steps {display: none;}
+.dcrf.dcrf_adregform_container fieldset {display: none;}
+.dcrf.dcrf_adregform_container fieldset:first-of-type {display: block;}
+.dcrf.dcrf_adregform_container fieldset.hidden {display: none;}
+.dcrf.dcrf_adregform_container fieldset.visible {display: block;}
+.dcrf.dcrf_adregform_container .progress_steps button {border: 0;}
+.dcrf.dcrf_adregform_container .progress_steps [disabled] {background: none;}
+.dcrf.dcrf_adregform_container .progress_steps .active {background: #eee;}
+.dcrf .error {color: red;}
+.dcrf label .optional {font-weight: normal;font-size: 90%;}
+.dcrf form.advisor_register_form fieldset {box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);padding: 30px 30px 0;}
+.dcrf form.advisor_register_form span input.error {margin-bottom: 0;}
+.dcrf form.advisor_register_form .column {margin-bottom: 20px;}
+.dcrf form.advisor_register_form textarea, form.advisor_register_form input[type=text], form.advisor_register_form select,form.advisor_register_form input[type=email],form.advisor_register_form input[type=number] {width: 100% !important;}
+.dcrf form.advisor_register_form .checkbox_row {float: left;min-width: 35%;}
+.dcrf form.advisor_register_form .checkbox_row input[type="checkbox"] {margin: 5px 10px 5px 0;}
+.dcrf form.advisor_register_form .add_more_experience {margin: 0 0 30px;}
+.dcrf form.advisor_register_form .work_experience label.title {border-bottom: 1px solid #ccc;}
